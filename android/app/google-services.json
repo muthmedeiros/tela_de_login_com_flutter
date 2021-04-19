@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "903967646024",
+    "project_id": "primeiroprojetotest",
+    "storage_bucket": "primeiroprojetotest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903967646024:android:50ab5652bbf53d9c53537d",
+        "android_client_info": {
+          "package_name": "medeiros.com.tela_de_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903967646024-2lesev80g914cq519rmsrpjnse4fce27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz4epMOSfR082rs7u8jac8WRmj59HrXAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903967646024-2lesev80g914cq519rmsrpjnse4fce27.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "903967646024-kh32oji2796l36gm1jqqvjp7ur4u80ht.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "medeiros.com.br"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
