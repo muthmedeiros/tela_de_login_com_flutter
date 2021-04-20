@@ -32,7 +32,7 @@ abstract class _LoginStore with Store {
     credentialError = !credentialError;
   }
 
-  loginWithEmail() async {
+  Future loginWithEmail() async {
     bool result;
     result = await auth.login(email, password, credentialError);
     if(!result) changeErrorStatus();
