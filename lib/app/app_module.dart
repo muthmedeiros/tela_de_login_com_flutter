@@ -1,6 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
 import 'app_widget.dart';
 import 'core/stores/auth_store.dart';
 import 'modules/home/home_module.dart';

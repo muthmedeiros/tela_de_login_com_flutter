@@ -39,21 +39,6 @@ mixin _$LoginStore on _LoginStore, Store {
     });
   }
 
-  final _$loggedInAtom = Atom(name: '_LoginStore.loggedIn');
-
-  @override
-  bool get loggedIn {
-    _$loggedInAtom.reportRead();
-    return super.loggedIn;
-  }
-
-  @override
-  set loggedIn(bool value) {
-    _$loggedInAtom.reportWrite(value, super.loggedIn, () {
-      super.loggedIn = value;
-    });
-  }
-
   final _$credentialErrorAtom = Atom(name: '_LoginStore.credentialError');
 
   @override
@@ -94,17 +79,6 @@ mixin _$LoginStore on _LoginStore, Store {
   }
 
   @override
-  void changeLoginState() {
-    final _$actionInfo = _$_LoginStoreActionController.startAction(
-        name: '_LoginStore.changeLoginState');
-    try {
-      return super.changeLoginState();
-    } finally {
-      _$_LoginStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
   void changeErrorStatus() {
     final _$actionInfo = _$_LoginStoreActionController.startAction(
         name: '_LoginStore.changeErrorStatus');
@@ -120,7 +94,6 @@ mixin _$LoginStore on _LoginStore, Store {
     return '''
 email: ${email},
 password: ${password},
-loggedIn: ${loggedIn},
 credentialError: ${credentialError}
     ''';
   }

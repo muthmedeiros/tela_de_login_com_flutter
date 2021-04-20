@@ -47,7 +47,6 @@ class _LoginState extends ModularState<LoginPage, LoginStore> {
                           ),
                           LoginForm(),
                           LoginError(
-                            isLogged: controller.loggedIn,
                             credentialError: controller.credentialError,
                           ),
                           EnterButton(

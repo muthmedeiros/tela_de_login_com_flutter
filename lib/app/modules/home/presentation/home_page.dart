@@ -34,8 +34,8 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Seja bem vindo ${controller?.auth?.auth?.currentUser?.email}\n\n"
-                          "Seu ID é: ${controller?.auth?.auth?.currentUser?.uid}",
+                          "Seja bem vindo ${controller?.auth?.user?.currentUser?.email}\n\n"
+                          "Seu ID é: ${controller?.auth?.user?.currentUser?.uid}",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 15),
                         ),

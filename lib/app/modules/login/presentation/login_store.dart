@@ -25,14 +25,6 @@ abstract class _LoginStore with Store {
   void setPassword(String value) => password = value;
 
   @observable
-  bool loggedIn = false;
-
-  @action
-  void changeLoginState() {
-    loggedIn = !loggedIn;
-  }
-
-  @observable
   bool credentialError = false;
 
   @action
@@ -41,6 +33,8 @@ abstract class _LoginStore with Store {
   }
 
   loginWithEmail() async {
-    credentialError = await auth.login(email, password, loggedIn, credentialError);
+    bool result;
+    result = await auth.login(email, password, credentialError);
+    if(!result) changeErrorStatus();
   }
 }

@@ -12,7 +12,7 @@ mixin _$HomeStore on _HomeStore, Store {
   final _$logoutAuthAsyncAction = AsyncAction('_HomeStore.logoutAuth');
 
   @override
-  Future logoutAuth() {
+  Future<dynamic> logoutAuth() {
     return _$logoutAuthAsyncAction.run(() => super.logoutAuth());
   }
 

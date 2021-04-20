@@ -16,15 +16,13 @@ abstract class _AuthStore with Store {
   @action
   void setUser() => user = auth;
 
-  Future login(String email, String password, bool loggedIn,
-      bool credentialError) async {
-    if (!loggedIn) {
-      try {
-        await auth.signInWithEmailAndPassword(email: email, password: password);
-        Modular.to.pushNamedAndRemoveUntil("/home", (_) => false);
-      } catch (e) {
-        if (credentialError == false) return true;
-      }
+  Future login(String email, String password, bool credentialError) async {
+    try {
+      await auth.signInWithEmailAndPassword(email: email, password: password);
+      setUser();
+      Modular.to.pushNamedAndRemoveUntil("/home", (_) => false);
+    } catch (e) {
+      if (credentialError == false) return false;
     }
   }
 
