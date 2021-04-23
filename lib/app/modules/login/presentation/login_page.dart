@@ -51,11 +51,7 @@ class _LoginState extends ModularState<LoginPage, LoginStore> {
                           ),
                           EnterButton(
                               buttonText: "Login",
-                              onPressed: () {
-                                setState(() {
-                                  controller.loginWithEmail();
-                                });
-                              }),
+                              onPressed: controller.enterLoginEmail),
                           /*Container(
                             width: 355,
                             height: 42,

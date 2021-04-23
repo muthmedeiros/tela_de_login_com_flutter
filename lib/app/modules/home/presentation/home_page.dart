@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:tela_de_login/app/core/stores/auth_store.dart';
 import 'package:tela_de_login/app/modules/home/presentation/home_store.dart';
 import 'package:tela_de_login/app/widgets/custom_sized_box.dart';
 import 'package:tela_de_login/app/widgets/enter_button.dart';
@@ -15,6 +16,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends ModularState<HomePage, HomeStore> {
+  final auth = Modular.get<AuthStore>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,8 +37,8 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Seja bem vindo ${controller?.auth?.user?.currentUser?.email}\n\n"
-                          "Seu ID é: ${controller?.auth?.user?.currentUser?.uid}",
+                          "Seja bem vindo ${auth?.user?.email}\n\n"
+                          "Seu ID é: ${auth?.user?.uid}",
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 15),
                         ),
@@ -48,7 +51,7 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                     EnterButton(
                       buttonText: "Logout",
                       onPressed: () {
-                        controller.logoutAuth();
+                        auth.signOut();
                       },
                     ),
                   ],
