@@ -8,7 +8,7 @@ import '../../../../core/errors/messages.dart';
 import '../../../../modules/login/domain/entities/logged_user_info.dart';
 import '../../../../modules/login/domain/errors/errors.dart';
 
-//part 'login_repository_impl.g.dart';
+part 'login_repository_impl.g.dart';
 
 abstract class LoginRepository {
   Future<Either<Failure, LoggedUserInfo>> loginEmail(

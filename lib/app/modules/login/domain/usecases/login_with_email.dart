@@ -5,7 +5,7 @@ import 'package:tela_de_login/app/modules/login/infra/repositories/login_reposit
 import '../../../../core/errors/errors.dart';
 import '../../../../modules/login/domain/entities/logged_user_info.dart';
 
-//part 'login_with_email.g.dart';
+part 'login_with_email.g.dart';
 
 abstract class LoginWithEmail {
   Future<Either<Failure, LoggedUserInfo>> call(String email, String password);

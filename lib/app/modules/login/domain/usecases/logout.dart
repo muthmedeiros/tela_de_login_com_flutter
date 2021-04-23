@@ -4,7 +4,7 @@ import 'package:tela_de_login/app/modules/login/infra/repositories/login_reposit
 
 import '../../../../core/errors/errors.dart';
 
-//part 'logout.g.dart';
+part 'logout.g.dart';
 
 abstract class Logout {
   Future<Either<Failure, Unit>> call();
