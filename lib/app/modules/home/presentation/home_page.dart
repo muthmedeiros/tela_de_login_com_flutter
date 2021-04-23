@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:tela_de_login/app/app_theme.dart';
 import 'package:tela_de_login/app/core/stores/auth_store.dart';
 import 'package:tela_de_login/app/modules/home/presentation/home_store.dart';
 import 'package:tela_de_login/app/widgets/custom_sized_box.dart';
@@ -8,7 +9,7 @@ import 'package:tela_de_login/app/widgets/enter_button.dart';
 import 'package:tela_de_login/app/widgets/image_with_shadow.dart';
 import 'package:tela_de_login/app/widgets/login_background.dart';
 
-import 'file:///D:/AndroidStudioProjects/tela_de_login/lib/app/app_theme.dart';
+
 
 class HomePage extends StatefulWidget {
   @override

@@ -5,7 +5,7 @@ import '../../../../core/errors/errors.dart';
 import '../../../../modules/login/domain/entities/logged_user_info.dart';
 import '../../../../modules/login/domain/repositories/login_repository.dart';
 
-//part 'login_with_email.g.dart';
+part 'login_with_email.g.dart';
 
 abstract class LoginWithEmail {
   Future<Either<Failure, LoggedUserInfo>> call(String email, String password);

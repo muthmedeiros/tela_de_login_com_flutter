@@ -11,6 +11,7 @@ class Messages {
 
   //MESSAGES TO CONNECTION USER
   static String get OFFLINE_CONNECTION => 'Você está offline.';
+
   static String get FAILED_CONNECTION => 'Erro ao recuperar informação de conexão.';
 
 

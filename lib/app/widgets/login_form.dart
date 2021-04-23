@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'file:///D:/AndroidStudioProjects/tela_de_login/lib/app/app_theme.dart';
+import 'package:tela_de_login/app/app_theme.dart';
+
 import 'package:tela_de_login/app/modules/login/presentation/login_store.dart';
 
 import 'custom_text_fields.dart';

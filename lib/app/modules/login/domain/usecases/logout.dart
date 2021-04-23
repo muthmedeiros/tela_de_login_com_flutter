@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import '../../../../core/errors/errors.dart';
 import '../../../../modules/login/domain/repositories/login_repository.dart';
 
-//part 'logout.g.dart';
+part 'logout.g.dart';
 
 abstract class Logout {
   Future<Either<Failure, Unit>> call();

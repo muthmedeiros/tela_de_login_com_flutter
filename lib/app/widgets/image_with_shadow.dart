@@ -1,7 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'file:///D:/AndroidStudioProjects/tela_de_login/lib/app/app_theme.dart';
+import 'package:tela_de_login/app/app_theme.dart';
+
 
 class ImageWithShadow extends StatelessWidget {
   final String imageAsset;

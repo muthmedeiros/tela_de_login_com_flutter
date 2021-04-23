@@ -8,7 +8,7 @@ import '../../../../modules/login/domain/errors/errors.dart';
 import '../../../../modules/login/domain/repositories/login_repository.dart';
 import '../../../../modules/login/infra/datasources/login_datasource.dart';
 
-//part 'login_repository_impl.g.dart';
+part 'login_repository_impl.g.dart';
 
 @Injectable(singleton: false)
 class LoginRepositoryImpl implements LoginRepository {
