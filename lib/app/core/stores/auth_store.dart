@@ -36,16 +36,6 @@ abstract class _AuthStore with Store {
     });
   }
 
-  /*Future login(String email, String password, bool credentialError) async {
-    try {
-      await auth.signInWithEmailAndPassword(email: email, password: password);
-      setUser();
-      Modular.to.pushNamedAndRemoveUntil("/home", (_) => false);
-    } catch (e) {
-      if (credentialError == false) return false;
-    }
-  }*/
-
   Future signOut() async {
     var result = await logout();
     result.fold((l) {

@@ -26,7 +26,7 @@ abstract class _LoginStore with Store {
   @action
   void setPassword(String value) => password = value;
 
-  _LoginStore(this.loginWithEmail, this.authStore, {this.email, this.password});
+  _LoginStore(this.loginWithEmail, this.authStore);
 
   enterLoginEmail() async {
     await Future.delayed(Duration(milliseconds: 500));

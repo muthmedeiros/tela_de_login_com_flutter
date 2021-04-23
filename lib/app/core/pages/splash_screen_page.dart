@@ -9,11 +9,12 @@ class SplashScreenPage extends StatefulWidget {
 }
 
 splashScreenPage() {
-  Future.delayed(Duration(seconds: 3)).whenComplete(() => {
-        Modular.get<AuthStore>().isLogged
-            ? Modular.to.pushNamedAndRemoveUntil("/home", (_) => false)
-            : Modular.to.pushNamedAndRemoveUntil("/login", (_) => false)
-      });
+  Future.delayed(Duration(seconds: 3)).whenComplete(() async {
+    bool isLogged = await Modular.get<AuthStore>().checkLogin();
+    isLogged
+        ? Modular.to.pushNamedAndRemoveUntil("/home", (_) => false)
+        : Modular.to.pushNamedAndRemoveUntil("/login", (_) => false);
+  });
 }
 
 class _SplashScreenPageState extends State<SplashScreenPage>

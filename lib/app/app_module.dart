@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -7,12 +8,17 @@ import 'core/stores/auth_store.dart';
 import 'modules/home/home_module.dart';
 import 'modules/login/domain/usecases/get_logged_user.dart';
 import 'modules/login/domain/usecases/logout.dart';
+import 'modules/login/infra/repositories/login_repository_impl.dart';
 import 'modules/login/login_module.dart';
 
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
+        ...LoginModule.export,
         Bind((i) => AuthStore(i<GetLoggedUser>(), i<Logout>())),
+        Bind((i) => GetLoggedUserImpl(i<LoginRepository>())),
+        Bind((i) => LogoutImpl(i<LoginRepository>())),
+        Bind((i) => FirebaseAuth.instance),
       ];
 
   @override

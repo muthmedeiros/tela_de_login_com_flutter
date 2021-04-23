@@ -10,7 +10,7 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: "/login",
+      initialRoute: "/",
       theme: ThemeData(
         fontFamily: 'Berlin',
       ),
