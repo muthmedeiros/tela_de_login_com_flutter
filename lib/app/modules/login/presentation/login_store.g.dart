@@ -49,21 +49,6 @@ mixin _$LoginStore on _LoginStore, Store {
     });
   }
 
-  final _$credentialErrorAtom = Atom(name: '_LoginStore.credentialError');
-
-  @override
-  bool get credentialError {
-    _$credentialErrorAtom.reportRead();
-    return super.credentialError;
-  }
-
-  @override
-  set credentialError(bool value) {
-    _$credentialErrorAtom.reportWrite(value, super.credentialError, () {
-      super.credentialError = value;
-    });
-  }
-
   final _$_LoginStoreActionController = ActionController(name: '_LoginStore');
 
   @override
@@ -89,22 +74,10 @@ mixin _$LoginStore on _LoginStore, Store {
   }
 
   @override
-  void changeErrorStatus() {
-    final _$actionInfo = _$_LoginStoreActionController.startAction(
-        name: '_LoginStore.changeErrorStatus');
-    try {
-      return super.changeErrorStatus();
-    } finally {
-      _$_LoginStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
   String toString() {
     return '''
 email: ${email},
-password: ${password},
-credentialError: ${credentialError}
+password: ${password}
     ''';
   }
 }

@@ -4,12 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:tela_de_login/app/app_theme.dart';
-
 import 'package:tela_de_login/app/widgets/custom_sized_box.dart';
 import 'package:tela_de_login/app/widgets/enter_button.dart';
 import 'package:tela_de_login/app/widgets/image_with_shadow.dart';
 import 'package:tela_de_login/app/widgets/login_background.dart';
-import 'package:tela_de_login/app/widgets/login_error.dart';
 import 'package:tela_de_login/app/widgets/login_form.dart';
 
 import 'login_store.dart';
@@ -47,20 +45,9 @@ class _LoginState extends ModularState<LoginPage, LoginStore> {
                             imageAsset: 'images/computador.png',
                           ),
                           LoginForm(),
-                          LoginError(
-                            credentialError: controller.credentialError,
-                          ),
                           EnterButton(
                               buttonText: "Login",
                               onPressed: controller.enterLoginEmail),
-                          /*Container(
-                            width: 355,
-                            height: 42,
-                            child: ElevatedButton(
-                              //onPressed: callLoginGoogle,
-                              child: Text('Login com Google'),
-                            ),
-                          ),*/
                         ],
                       ),
                     ],
@@ -75,16 +62,4 @@ class _LoginState extends ModularState<LoginPage, LoginStore> {
       ),
     );
   }
-
-/*void callLoginGoogle() async {
-    final googleUser = await widget.googleSignIn.signIn();
-    final googleAuthentication = await googleUser.authentication;
-    final authCredential = GoogleAuthProvider.credential(
-      idToken: googleAuthentication.idToken,
-      accessToken: googleAuthentication.accessToken,
-    );
-    widget.auth.signInWithCredential(authCredential).whenComplete(() {
-      setState(() {});
-    });
-  }*/
 }

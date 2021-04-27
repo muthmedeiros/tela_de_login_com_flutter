@@ -40,7 +40,7 @@ class LoginRepositoryImpl implements LoginRepository {
 
       return Right(userModel);
     } catch (e) {
-      return Left(e);
+      return Left(ErrorLoginEmail(message: Messages.FAILED_TO_LOGIN));
     }
   }
 
