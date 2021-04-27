@@ -10,7 +10,6 @@ import 'package:tela_de_login/app/modules/login/login_module.dart';
 import '../../../mock-firebase.dart';
 
 main() async {
-
   initModules([
     AppModule(),
     LoginModule(),

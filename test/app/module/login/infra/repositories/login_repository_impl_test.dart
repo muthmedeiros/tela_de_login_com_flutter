@@ -15,17 +15,17 @@ class UserMock extends Mock implements User {}
 
 main() {
   final firebaseAuth = FirebaseAuthMock();
-  final userCredentialMock = UserCredentialMock();
+  final userCredential = UserCredentialMock();
   final user = UserMock();
   final repository = LoginRepositoryImpl(firebaseAuth);
 
   setUpAll(() {
-    when(userCredentialMock.user).thenReturn(user);
-    when(user.uid).thenReturn("teste123");
-    when(user.email).thenReturn("teste@teste.com");
     when(firebaseAuth.signInWithEmailAndPassword(
-            email: anyNamed('email'), password: anyNamed('password')))
-        .thenAnswer((_) async => userCredentialMock);
+    email: anyNamed('email'), password: anyNamed('password')))
+        .thenAnswer((_) async => userCredential);
+    when(userCredential.user).thenReturn(user);
+    when(user.email).thenReturn("teste@teste.com");
+    when(user.uid).thenReturn("teste123");
   });
 
   group("loginEmail", () {
