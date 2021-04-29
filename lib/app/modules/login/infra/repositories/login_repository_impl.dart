@@ -26,8 +26,10 @@ class LoginRepositoryImpl implements LoginRepository {
   LoginRepositoryImpl(this.auth);
 
   @override
-  Future<Either<Failure, LoggedUserInfo>> loginEmail(
-      {String email, String password}) async {
+  Future<Either<Failure, LoggedUserInfo>> loginEmail({
+    String email,
+    String password,
+  }) async {
     try {
       var result = await auth.signInWithEmailAndPassword(
           email: email, password: password);

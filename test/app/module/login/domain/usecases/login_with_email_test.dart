@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:tela_de_login/app/core/errors/messages.dart';
@@ -10,8 +9,6 @@ import 'package:tela_de_login/app/modules/login/infra/models/user_model.dart';
 import 'package:tela_de_login/app/modules/login/infra/repositories/login_repository_impl.dart';
 
 class LoginRepositoryMock extends Mock implements LoginRepository {}
-
-class FirebaseUserMock extends Mock implements User {}
 
 main() {
   final repository = LoginRepositoryMock();
