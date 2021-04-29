@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:tela_de_login/app/modules/signup/signup_module.dart';
 
 import 'app_widget.dart';
 import 'core/pages/splash_screen_page.dart';
@@ -14,6 +15,7 @@ class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
         ...LoginModule.export,
+        ...SignupModule.export,
         $AuthStore,
         $GetLoggedUserImpl,
         $LogoutImpl,
@@ -25,6 +27,7 @@ class AppModule extends MainModule {
         ModularRouter("/", child: (_, __) => SplashScreenPage()),
         ModularRouter("/login", module: LoginModule()),
         ModularRouter("/home", module: HomeModule()),
+        ModularRouter("/signup", module: SignupModule()),
       ];
 
   @override
